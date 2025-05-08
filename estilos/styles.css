@@ -1,0 +1,107 @@
+:root {
+  --color-principal: #09f;
+  --gris-claro: #f9f9f9;
+  --texto: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: white;
+  color: var(--texto);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Encabezado */
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--color-principal);
+  margin-bottom: 1rem;
+}
+
+/* Sección principal */
+main #content {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+main p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Proyectos */
+.proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+  max-width: 1200px;
+}
+
+.proyectos > div {
+  background: var(--gris-claro);
+  border-radius: 6px;
+  padding: 1rem;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.proyectos > div:hover {
+  transform: scale(1.02);
+}
+
+.proyectos img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.proyectos h3 {
+  margin: 0.5rem 0;
+  color: var(--color-principal);
+}
+
+.proyectos p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Botones */
+button {
+  background: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background: #0077cc;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
