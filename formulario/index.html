@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Anti-Tontos</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+
+    <h1>Formulario básico</h1>
+    <br>
+
+    <form action="inicio.html" method="post">
+
+        <label for="nombre">Nombre:</label>
+        <br>
+        <input type="text" 
+               id="nombre" 
+               name="nombre" 
+               placeholder="Digite su primer nombre" 
+               title="Ejemplo: Pepito"
+               required>
+        <br><br>
+
+        <label for="correo">Correo:</label>
+        <br>
+        <input type="email" 
+            id="correo" 
+            name="correo" 
+            placeholder="Su correo cotidiano" 
+            title="Ejemplo: pepito@mail.com" 
+            required>
+        <br><br>
+
+
+        <label for="contraseña">Contraseña:</label>
+        <br>
+        <input type="password" 
+               id="contraseña" 
+               name="contraseña" 
+               placeholder="Su contraseña" 
+               title="Mínimo 8 caracteres, al menos 1 mayúscula, 1 número y 1 símbolo" 
+                pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,12}$"
+               required>
+        <br><br>
+
+        <label>Género:</label>
+        <br>
+        <input type="radio" id="hombre" name="genero" value="hombre" >
+        <label for="hombre">Hombre</label>
+        <br>
+
+        <input type="radio" id="mujer" name="genero" value="mujer">
+        <label for="mujer">Mujer</label>
+        <br><br>
+
+        <label>Intereses:</label>
+        <br>
+        <input type="checkbox" id="arte" name="intereses" value="arte">
+        <label for="arte">Arte</label>
+        <br>
+
+        <input type="checkbox" id="deporte" name="intereses" value="deporte">
+        <label for="deporte">Deporte</label>
+        <br><br>
+
+        <label for="pais">País:</label>
+        <br>
+        <select id="pais" name="pais" required>
+            <option value="">Selecciona tu país</option>
+            <option value="mexico">México</option>
+            <option value="colombia">Colombia</option>
+            <option value="argentina">Argentina</option>
+            <option value="chile">Chile</option>
+            <option value="peru">Perú</option>
+            <option value="spain">España</option>
+            <option value="ecuador">Ecuador</option>
+            <option value="venezuela">Venezuela</option>
+        </select>
+        <br><br>
+
+        <label for="comentario">Descripción:</label>
+        <br>
+        <textarea name="comentario" id="comentario" rows="4" cols="20" placeholder="Escriba algo sobre usted..." required></textarea>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
