@@ -23,7 +23,6 @@ body {
   text-align: center;
 }
 
-/* Encabezado */
 header {
   margin-bottom: 2rem;
 }
@@ -34,7 +33,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/* Sección principal */
 main #content {
   max-width: 800px;
   margin: 0 auto 2rem;
@@ -45,7 +43,6 @@ main p {
   line-height: 1.6;
 }
 
-/* Proyectos */
 .proyectos {
   display: flex;
   flex-wrap: wrap;
@@ -85,7 +82,6 @@ main p {
   line-height: 1.4;
 }
 
-/* Botones */
 button {
   background: var(--color-principal);
   color: white;
