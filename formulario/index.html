@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Formulario Anti-Tontos</title>
+  <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+
+  <div class="contenedor">
+
+    <h1>Formulario</h1>
+
+    <form action="inicio.html" method="post" onsubmit="return validarCorreo()">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Pepito" required>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" placeholder="Ej: pepito@gmail.com" required>
+        <span id="errorCorreo" style="color: red;"></span>
+
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" placeholder="Mínimo 8 caracteres"
+               pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,12}$" required>
+
+        <label>Género:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="genero" value="hombre"> Hombre</label>
+            <label><input type="radio" name="genero" value="mujer"> Mujer</label>
+        </div>
+
+        <label>Intereses:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="intereses" value="arte"> Arte</label>
+            <label><input type="checkbox" name="intereses" value="deporte"> Deporte</label>
+        </div>
+
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" required>
+            <option value="">Selecciona tu país</option>
+            <option value="mexico">México</option>
+            <option value="colombia">Colombia</option>
+            <option value="argentina">Argentina</option>
+            <option value="chile">Chile</option>
+            <option value="peru">Perú</option>
+            <option value="spain">España</option>
+            <option value="ecuador">Ecuador</option>
+            <option value="venezuela">Venezuela</option>
+        </select>
+
+        <label for="comentario">Descripción:</label>
+        <textarea id="comentario" name="comentario" placeholder="Escribe algo sobre ti..." rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+    
+  </div>
+
+  <script>
+    function validarCorreo() {
+      const campo = document.getElementById("correo");
+      const error = document.getElementById("errorCorreo");
+      const correo = campo.value.trim();
+      const regex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com|yahoo\.com|icloud\.com|live\.com)$/;
+
+      if (!regex.test(correo)) {
+        error.textContent = "Por favor ingresa un correo válido de Gmail, Hotmail, Outlook, Yahoo, iCloud o Live.";
+        campo.focus();
+        return false;
+      }
+
+      error.textContent = "";
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>

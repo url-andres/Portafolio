@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #000;
+  line-height: 1.6;
+}
+
+header {
+  background: #2d40e6;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+#content p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.2em;
+}
+
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.proyectos article {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%; 
+}
+
+.proyectos article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.proyectos img {
+  width: 100%;
+  max-height: 200px; 
+  object-fit: cover; 
+  border-radius: 8px;
+  margin-bottom: 15px; 
+}
+
+.proyectos h3 {
+  margin: 10px 0;
+  font-size: 1.3em;
+  color: #2d40e6;
+}
+
+.proyectos p {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.boton {
+  align-self: center;
+  padding: 10px 20px;
+  background: #2d40e6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-top: 20px; 
+}
+
+.boton:hover {
+  background: #1a28b4;
+}
